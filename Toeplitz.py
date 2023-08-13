@@ -5,8 +5,6 @@ import math
 from scipy.linalg import toeplitz
 from matplotlib import pyplot as plt
 import scipy
-#data = scipy.io.loadmat("./toep_data.mat")
-#Signal,SnapNum,K,d,M,lmda = data["Signal"],data["SnapNum"],int(data["K"]),data["d"],data["M"],data["lmda"]
 def Multiple_Toeplitz_function(Signal,SnapNum,K,d,N,lmda):
     """
     %Signal                         Data received by the array

@@ -5,6 +5,7 @@ import math
 from scipy.linalg import toeplitz
 from matplotlib import pyplot as plt
 import scipy
+import torch
 def Multiple_Toeplitz_function(Signal,SnapNum,K,d,N,lmda):
     """
     %Signal                         Data received by the array
@@ -36,7 +37,6 @@ def Multiple_Toeplitz_function(Signal,SnapNum,K,d,N,lmda):
     E22 = E[K:2*K,K:2*K]
     M = -(E12@np.linalg.inv(E22))
     Dm,Vm = np.linalg.eig(M)
-    print(Dm)
     result = np.degrees(np.arcsin(np.angle(Dm)/pi))
     result.sort()
     return result
@@ -50,8 +50,8 @@ if __name__=="__main__":
     Signals = np.loadtxt("Signals.csv",dtype=complex).reshape((-1,11,64))
     Labels = np.loadtxt("Labels.csv")
     #Features = np.zeros((100))
-    print(Labels)
-    for i in range(100):
+    #print(Labels)
+    for i in range(1):
         M = 2 * 5 + 1
         f0 = 150e3
         c = 1500
@@ -75,7 +75,7 @@ if __name__=="__main__":
         Signal = Signals[i]
         res = Multiple_Toeplitz_function(Signal,SnapNum,K,d,M,lmda)
         total_loss+=loss(source_doa,res)
-        print(res)
+        #print(res)
     #     Signals[i,:,:] = Signal
     #     Labels[i,:] = source_doa
     # np.savetxt("Signals.csv", Signals.flatten())

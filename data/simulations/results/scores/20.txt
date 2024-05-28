@@ -1,0 +1,109 @@
+------------------------------------
+---------- New Simulation ----------
+------------------------------------
+date and time = 15/09/2023 15:57:44
+Creating Data...
+Training DataSet size 90
+Validation DataSet size 10
+
+--- New Simulation ---
+
+Description: Simulation of SubspaceNetToeplitz, training stage
+System model parameters:
+Number of sources = 2
+Number of sensors = 8
+signal_type = NarrowBand
+Observations = 100
+SNR = 20, coherent sources
+Spacing deviation (eta) = 0
+Geometry noise variance = 0
+Simulation parameters:
+Model: SubspaceNetToeplitz
+SubspaceNet: tau = 8
+SubspaceNet: differentiable subspace method  = toeplitz
+Epochs = 20
+Batch Size = 1024
+Learning Rate = 0.1
+Weight decay = 1e-09
+Gamma Value = 0.2
+Step Value = 80
+
+----------------------
+
+date and time = 15/09/2023 15:57:49
+
+---Start Training Stage ---
+
+epoch : 1/20, Train loss = 0.541943, Validation loss = 0.420296
+lr 0.1
+Validation Loss Decreased(inf--->0.420296) 	 Saving The Model
+epoch : 2/20, Train loss = 0.523099, Validation loss = 0.420296
+lr 0.1
+epoch : 3/20, Train loss = 0.539257, Validation loss = 0.420296
+lr 0.1
+epoch : 4/20, Train loss = 0.468068, Validation loss = 0.420296
+lr 0.1
+epoch : 5/20, Train loss = 0.511185, Validation loss = 0.420296
+lr 0.1
+epoch : 6/20, Train loss = 0.501572, Validation loss = 0.420296
+lr 0.1
+epoch : 7/20, Train loss = 0.518420, Validation loss = 0.420296
+lr 0.1
+epoch : 8/20, Train loss = 0.508505, Validation loss = 0.420296
+lr 0.1
+epoch : 9/20, Train loss = 0.473184, Validation loss = 0.420296
+lr 0.1
+epoch : 10/20, Train loss = 0.499182, Validation loss = 0.420296
+lr 0.1
+epoch : 11/20, Train loss = 0.512799, Validation loss = 0.420296
+lr 0.1
+epoch : 12/20, Train loss = 0.528230, Validation loss = 0.420296
+lr 0.1
+epoch : 13/20, Train loss = 0.497277, Validation loss = 0.420296
+lr 0.1
+epoch : 14/20, Train loss = 0.484466, Validation loss = 0.420296
+lr 0.1
+epoch : 15/20, Train loss = 0.496948, Validation loss = 0.420296
+lr 0.1
+epoch : 16/20, Train loss = 0.483661, Validation loss = 0.420296
+lr 0.1
+epoch : 17/20, Train loss = 0.508145, Validation loss = 0.420296
+lr 0.1
+epoch : 18/20, Train loss = 0.493784, Validation loss = 0.420296
+lr 0.1
+epoch : 19/20, Train loss = 0.503129, Validation loss = 0.420296
+lr 0.1
+epoch : 20/20, Train loss = 0.459591, Validation loss = 0.420296
+lr 0.1
+
+--- Training summary ---
+Training complete in 0m 2s
+Minimal Validation loss: 0.420296 at epoch 0
+Loss measure = rmse
+
+--- New Simulation ---
+
+Description: Simulation of SubspaceNetToeplitz, evaluation stage
+System model parameters:
+Number of sources = 2
+Number of sensors = 8
+signal_type = NarrowBand
+Observations = 100
+SNR = 20, coherent sources
+Spacing deviation (eta) = 0
+Geometry noise variance = 0
+Simulation parameters:
+Model: SubspaceNetToeplitz
+SubspaceNet: tau = 8
+SubspaceNet: differentiable subspace method  = toeplitz
+SubspaceNetToeplitz Test loss = 0.4904433557403359
+augmented music test loss = 0.5139879917600211
+augmented esprit test loss = 0.5067850666358515
+augmented r-music test loss = 0.5323755297903883
+esprit test loss = 0.4522730900923549
+music test loss = 0.20503650595929115
+r-music test loss = 0.2218510220496779
+sps-r-music test loss = 0.000865589244010811
+sps-esprit test loss = 0.0008652748254739271
+sps-music test loss = 0.009938767413105063
+end
